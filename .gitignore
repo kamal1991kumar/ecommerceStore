@@ -1,3 +1,10 @@
 
 #depandancies
 **/node_modules
+
+#private
+**/.env
+
+#folders
+**/.next
+**/build
