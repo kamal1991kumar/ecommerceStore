@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "node backend/app.js",
-    "start": "next dev ./frontend -p 4000"
+    "server": "nodemon backend/app.js",
+    "start": "next dev ./frontend -p 4000",
+    "build": "next build ./frontend"
   },
   "keywords": [],
   "author": "",

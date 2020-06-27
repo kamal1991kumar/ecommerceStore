@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "config/*": [
+        "config/*"
+      ],
+      "mailer/*": [
+        "mailer/*"
+      ]
+    }
+  },
+  "exclude": ["node_modules"],
+  "experimentalDecorators": true,
+  "allowSyntheticDefaultImports": true,
+}

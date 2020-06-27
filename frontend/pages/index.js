@@ -1,9 +1,9 @@
 import React from 'react';
-import { http, constants, localStore } from '../config/index';
-import LoginView from '../views/LoginView';
+import { http, constants, localStore } from 'config';
+import LoginView from 'views/LoginView';
 import _ from 'lodash';
 
-export default class extends React.Component{
+export default class LoginPage extends React.Component{
 
     state = {
         isLoding: true,
@@ -15,7 +15,7 @@ export default class extends React.Component{
     onInputChange = ( e ) => {
 
         const { value, name } = e.currentTarget;
-        this.setState( { [ name ]: value } );
+        this.setState( { [ name ]: value, message: '' } );
     }
 
     onSubmit = ( e ) => {
@@ -32,6 +32,8 @@ export default class extends React.Component{
            if( constants.SUCCESS === status ) {
 
                 localStore.setUser( payload.data );
+                
+                this.props.router.push('/dashboard');
 
            } else {
 

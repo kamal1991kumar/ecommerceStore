@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "config/*": [
+        "config/*"
+      ],
+      "layouts/*": [
+        "layouts/*"
+      ],
+      "views/*": [
+        "views/*"
+      ]
+    }
+  },
+  "exclude": ["node_modules"],
+  "experimentalDecorators": true,
+  "allowSyntheticDefaultImports": true,
+}

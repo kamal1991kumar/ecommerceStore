@@ -1,11 +1,11 @@
 const router = require("express").Router();
-const User = require('./user');
-const app = require( '../config' );
-const mailer = require( '../mailer' );
+const User = require('./schema');
+const app = require('../../config');
+const mailer = require( '../../mailer' );
 const _ = require('lodash');
 const response = app.responseData;
 
-router.post( '/register',  async ( req, res  ) => {
+router.post('/register',  async ( req, res  ) => {
 
     try {
 
@@ -16,7 +16,7 @@ router.post( '/register',  async ( req, res  ) => {
 
     } catch( error ) {
         console.log( error );
-        res.status(400).send( response.failure( error ) );
+        res.status(202).send( response.failure( error ) );
 
     }
 
@@ -87,7 +87,7 @@ router.post('/password_reset/:email',  async( req, res  ) => {
 
 } );
 
-router.get('/users',  async( req, res  ) => {
+router.get('/',  async( req, res  ) => {
 
     try {
 

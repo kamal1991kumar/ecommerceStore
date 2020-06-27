@@ -3,6 +3,23 @@ html,body,#__next {
     width: 100%;
 }
 
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
 body {
-    background: #f1f1f1;
+    background: #f7f7f7;
+    font-size: 14px;
+}
+
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #dee2e6;
+}
+
+td {
+    vertical-align: middle;
 }
